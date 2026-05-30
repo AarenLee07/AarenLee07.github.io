@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-sm navbar-light fixed-top mb-5 shadow-sm">
     <div class="{% if page.container_class %}{{ page.container_class }}{% else %}container-lg{% endif %}">
-        <a class="navbar-brand"><strong>{{site.data.profile.navbar_name}}</strong></a>
+        <a class="navbar-brand name-interactive">
+            <span class="name-default">Tripple.<span class="name-hl">L</span></span>
+            <span class="name-expanded"><span class="name-hl">L</span>un <span class="name-hl">L</span>ong <strong><span class="name-hl">L</span>I</strong></span>
+        </a>
         <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-map"></i> Menu
         </button>
@@ -12,6 +15,11 @@
                     <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
                 </li>
                 {% endfor %}
+                <li class="nav-item">
+                    <button class="theme-toggle-btn nav-link" id="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </div>
